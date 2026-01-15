@@ -1,0 +1,16 @@
+```text
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Database
+pos_data.db
+
+# PDFs
+*.pdf
+
+# Images
+*.png
+*.jpg
+*.jpeg

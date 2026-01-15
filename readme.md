@@ -1,67 +1,42 @@
-MC POS - Modular Checkout System
-Version: Alpha 0.1.9.4
+# MC POS - Modular Checkout System
 
-Status: In Entwicklung (Alpha)
+**Version:** Alpha 0.1.9.4  
+**Entwickler:** [T0mk4](https://github.com/T0mk4)  
+**Status:** Alpha-Entwicklungsphase
 
-MC POS ist ein leichtgewichtiges, Python-basiertes Kassensystem mit integrierter Lagerverwaltung und automatischer Beleg-Erstellung. Es wurde speziell für eine einfache Handhabung und schnelle Bestandsführung entwickelt.
+MC POS ist ein modernes, Python-basiertes Point-of-Sale-System (POS), das speziell für kleine Unternehmen entwickelt wurde, die eine einfache Lagerverwaltung mit Seriennummern-Erfassung und automatischer Beleg-Erstellung benötigen.
 
-🚀 Features
-Touch-Kasse: Intuitive Benutzeroberfläche mit Produktkacheln und Bild-Support.
+---
 
-Lagerverwaltung: Dynamischer Wareneingang mit optionaler Erfassung von Seriennummern pro Stück.
+## 🚀 Kernfunktionen
 
-Bestandsschutz: Automatischer Abgleich der Bestände beim Verkauf; Verkauf bei Nullbestand wird blockiert.
+### 🛒 Kassen-Modul
+* **Visuelles Interface:** Produktkacheln mit Bild-Vorschau und aktueller Lageranzeige.
+* **Warenkorb-Logik:** Schnelles Hinzufügen von Artikeln per Klick.
+* **Bestandsschutz:** Automatischer Check vor dem Hinzufügen. Artikel ohne Bestand können nicht verkauft werden.
+* **Automatisierter Warenausgang:** Bei jedem Verkauf wird der Bestand in der Datenbank automatisch reduziert.
 
-Beleg-System: Automatische Generierung von PDF-Kassenbelegen inklusive Firmenlogo, MwSt.-Berechnung und Stammdaten.
+### 📦 Lager & Logistik
+* **Wareneingang:** Einbuchen von Beständen mit frei wählbarem Datum (DatePicker).
+* **Seriennummern-Tracking:** Dynamische Generierung von Eingabefeldern basierend auf der Menge. Wenn 5 Artikel eingebucht werden, erscheinen exakt 5 SN-Felder.
+* **Historie:** Vollständige tabellarische Übersicht aller Lagerbewegungen.
 
-Mandantenfähig: Einfache Einrichtung von Shop-Daten (Name, Anschrift, Steuernummer, etc.) direkt in der App.
+### 📄 Belegwesen & Mandanten
+* **PDF-Generierung:** Erstellung professioneller Kassenbelege mit Logo, Shop-Daten und automatischer MwSt-Berechnung.
+* **Mandantenverwaltung:** Zentrale Pflege von Anschrift, Email, Website und Steuernummer direkt in der App.
+* **Auto-Open:** Der Beleg wird sofort nach dem Verkauf im Standard-PDF-Viewer geöffnet.
 
-Datenbank: Lokale Datenspeicherung mittels SQLite (kein externer Server nötig).
+---
 
-🛠 Installation
-Repository klonen:
+## 🛠 Installation
 
-Bash
+### Voraussetzungen
+* Python 3.10 oder höher
+* pip (Python Package Installer)
 
-git clone https://github.com/DEIN_USERNAME/mc-pos.git
-cd mc-pos
-Virtuelle Umgebung erstellen:
+### Setup
 
-Bash
-
-python -m venv .venv
-source .venv/bin/activate  # Unter Windows: .venv\Scripts\activate
-Abhängigkeiten installieren:
-
-Bash
-
-pip install flet fpdf2
-Assets vorbereiten: Stelle sicher, dass ein Ordner namens assets im Projektverzeichnis existiert, um Artikelbilder und Logos zu speichern.
-
-💻 Starten
-Starte die Anwendung einfach über Python:
-
-Bash
-
-python main.py
-📂 Projektstruktur
-main.py: Die Hauptanwendung (Logik & UI).
-
-pos_data.db: SQLite-Datenbank (wird beim ersten Start automatisch erstellt).
-
-assets/: Verzeichnis für Produktbilder und das Shop-Logo.
-
-requirements.txt: Liste der benötigten Python-Module.
-
-📝 Geplante Funktionen (Roadmap)
-[ ] Umsatz-Statistiken und Tagesabschluss-Reports.
-
-[ ] Barcode-Scanner-Integration.
-
-[ ] Suchfunktion für Seriennummern in der Historie.
-
-[ ] Rabatt-System und verschiedene Zahlungsmethoden.
-
-Entwickelt von: [T0mk4]
-
-Lizenz: MIT
+1. **Repository klonen:**
+   ```bash
+   git clone [https://github.com/T0mk4/mc-pos.git](https://github.com/T0mk4/mc-pos.git)
+   cd mc-pos
