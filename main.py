@@ -60,13 +60,13 @@ def main(page: ft.Page):
         elif settings_data[8] == "dunkel": page.theme_mode = ft.ThemeMode.DARK
         else: page.theme_mode = ft.ThemeMode.SYSTEM
 
-    page.title = "MC POS - Alpha 0.3.0.1"
+    page.title = "MC POS - Alpha 0.3.0.2"
     page.window.width, page.window.height = 1280, 850
     page.window.resizable = False
     cart, temp_img = [], {"prod": "", "logo": ""}
     file_picker_mode = ft.Text("")
 
-    product_grid = ft.GridView(expand=True, runs_count=4, max_extent=210, spacing=15)
+    product_grid = ft.GridView(expand=True, runs_count=4, max_extent=220, spacing=15)
     cart_list = ft.ListView(expand=True)
     total_sum_label = ft.Text("0.00 EUR", size=32, weight="bold", color="white")
     cart_title = ft.Text("Warenkorb", size=22, weight="bold")
