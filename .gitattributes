@@ -1,0 +1,3 @@
+build/** linguist-detectable=false
+dist/** linguist-detectable=false
+*.html linguist-detectable=false
